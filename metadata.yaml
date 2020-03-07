@@ -1,0 +1,27 @@
+name: logging-benchmark
+display-name: Logging Benchmark
+summary: A charm for testing the performance of Juju's logging
+maintainer: Opax <opax@katharostech.com>
+description: |
+  This charm was made to test the impact that juju-log has on charm performance.
+series:
+  - oneiric
+  - precise
+  - quantal
+  - raring
+  - saucy
+  - trusty
+  - utopic
+  - vivid
+  - wily
+  - xenial
+  - yakkety
+  - zesty
+  - artful
+  - bionic
+  - cosmic
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - misc
+subordinate: false
