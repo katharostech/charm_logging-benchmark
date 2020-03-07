@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+# First step: echo 1000 times to a file
+to_file_time=$(/usr/bin/time -po /dev/stdout bash -c 'for i in $(seq 1000); do echo "Item $i" >> /tmp/charm-logging1.log; done')
+
+# Next step: echo 1000 times to a file
+juju_log_time=$(/usr/bin/time -po /dev/stdout bash -c 'for i in $(seq 1000); do juju-log "Item $i"; done')
+
+juju-log "============================================================================================"
+
+juju-log "To file time ( 1000 records ): $to_file_time"
+juju-log "Juju log time ( 1000 records ): $juju_log_time"
